@@ -1073,6 +1073,53 @@ const project: CosmosProject = {
       ['google.protobuf.Any', { file: './proto/google/protobuf/any.proto', messages: ['Any'] }],
       ['google.protobuf.Duration', { file: './proto/google/protobuf/duration.proto', messages: ['Duration'] }],
       ['google.protobuf.Timestamp', { file: './proto/google/protobuf/timestamp.proto', messages: ['Timestamp'] }],
+
+      ////////////  Ethermint  //////////////
+      //////////////////////////////////////
+      // --------------------- ethermint  ----------------
+      ['ethermint.types.v1', { file: './proto/ethermint/types/v1/web3.proto', messages: ['ExtensionOptionsWeb3Tx'] }],
+      [
+        'ethermin.evm.v1.tx',
+        {
+          file: './proto/ethermint/evm/v1/tx.proto',
+          messages: [
+            'MsgEthereumTx',
+            'LegacyTx',
+            'AccessListTx',
+            'DynamicFeeTx',
+            'ExtensionOptionsEthereumTx',
+            'MsgUpdateParams',
+          ],
+        },
+      ],
+      ['ethermin.feemarket.v1.tx', { file: './proto/ethermint/feemarket/v1/tx.proto', messages: ['MsgUpdateParams'] }],
+      [
+        'ethermint.evm.v1.evm',
+        {
+          file: './proto/ethermint/evm/v1/evm.proto',
+          messages: [
+            'Params',
+            'ChainConfig',
+            'State',
+            'TransactionLogs',
+            'Log',
+            'TxResult',
+            'AccessTuple',
+            'TraceConfig',
+          ],
+        },
+      ],
+      [
+        'ethermint.evm.v1.genesis',
+        {
+          file: './proto/ethermint/evm/v1/genesis.proto',
+          messages: ['GenesisState', 'GenesisAccount'],
+        },
+      ],
+      [
+        'ethermint.evm.crypto.v1',
+        { file: './proto/ethermint/crypto/v1/ethsecp256k1/keys.proto', messages: ['PubKey', 'PrivKey'] },
+      ],
     ]),
   },
 }
