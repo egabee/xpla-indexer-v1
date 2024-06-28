@@ -1120,6 +1120,37 @@ const project: CosmosProject = {
         'ethermint.evm.crypto.v1',
         { file: './proto/ethermint/crypto/v1/ethsecp256k1/keys.proto', messages: ['PubKey', 'PrivKey'] },
       ],
+      ////////////  XPLA  //////////////
+      //////////////////////////////////////
+      [
+        'xpla.reward.v1beta1.genesis',
+        { file: './proto/xpla/reward/v1beta1/genesis.proto', messages: ['GenesisState'] },
+      ],
+      ['xpla.reward.v1beta1.reward', { file: './proto/xpla/reward/v1beta1/reward.proto', messages: ['Params'] }],
+      [
+        'xpla.reward.v1beta1.tx',
+        { file: './proto/xpla/reward/v1beta1/tx.proto', messages: ['MsgFundFeeCollector', 'MsgUpdateParams'] },
+      ],
+      [
+        'xpla.volunteer.v1beta1.genesis',
+        { file: './proto/xpla/volunteer/v1beta1/genesis.proto', messages: ['GenesisState'] },
+      ],
+      [
+        'xpla.volunteer.v1beta1.proposal',
+        {
+          file: './proto/xpla/volunteer/v1beta1/proposal.proto',
+          messages: [
+            'RegisterVolunteerValidatorProposal',
+            'RegisterVolunteerValidatorProposalWithDeposit',
+            'UnregisterVolunteerValidatorProposal',
+            'UnregisterVolunteerValidatorProposalWithDeposit',
+          ],
+        },
+      ],
+      [
+        'xpla.volunteer.v1beta1.volunteervalidator',
+        { file: './proto/xpla/volunteer/v1beta1/volunteervalidator.proto', messages: ['VolunteerValidator'] },
+      ],
     ]),
   },
 }
