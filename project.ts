@@ -1151,6 +1151,21 @@ const project: CosmosProject = {
         'xpla.volunteer.v1beta1.volunteervalidator',
         { file: './proto/xpla/volunteer/v1beta1/volunteervalidator.proto', messages: ['VolunteerValidator'] },
       ],
+      // Evmos
+      [
+        'evmos.erc20.v1.tx',
+        {
+          file: './proto/evmos/erc20/v1/tx.proto',
+          messages: ['MsgConvertERC20', 'MsgConvertCoin', 'MsgUpdateParams']
+        }
+      ],
+      [
+        'evmos.erc20.v1.erc20',
+        {
+          file: './proto/evmos/erc20/v1/erc20.proto',
+          messages: ['Owner', 'TokenPair', 'RegisterCoinProposal', 'ProposalMetadata', 'RegisterERC20Proposal', 'ToggleTokenConversionProposal']
+        }
+      ]
     ]),
   },
 }
